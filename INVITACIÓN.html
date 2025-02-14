@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8d7da;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .heart {
+            color: red;
+            font-size: 50px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff3b2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <h1>¿Quieres ser mi San Valentín?</h1>
+        <button class="button" onclick="showYesMessage()">Sí</button>
+        <button class="button" onclick="showNoMessage()">No</button>
+    </div>
+
+    <script>
+        function showYesMessage() {
+            alert("¡Gracias! ¡Feliz San Valentín!");
+        }
+
+        function showNoMessage() {
+            alert("Por favor, reconsidera. ¿Quieres ser mi San Valentín?");
+            showNoMessage();
+        }
+    </script>
+</body>
+</html>
